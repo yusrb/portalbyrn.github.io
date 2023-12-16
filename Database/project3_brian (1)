@@ -1,0 +1,77 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Dec 14, 2023 at 12:05 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `project3_brian`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id_artikel` int NOT NULL,
+  `judul` text,
+  `deskripsi` mediumtext,
+  `jumlah_pelihat` int DEFAULT NULL,
+  `penulis` text NOT NULL,
+  `gambar` blob,
+  `video` varchar(1000) DEFAULT NULL,
+  `daftar_pustaka` text,
+  `likes` int DEFAULT '0',
+  `dislikes` int DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`id_artikel`, `judul`, `deskripsi`, `jumlah_pelihat`, `penulis`, `gambar`, `video`, `daftar_pustaka`, `likes`, `dislikes`) VALUES
+(1, 'Materi Seni Budaya', '<p>Halaman ini berisi rangkuman materi seni budaya yang bertemakan Tari Kreasi Modern dan bertujuan untuk memenuhi tugas kolaborasi dan Tugas Kejuruan berupa Project 3 yang bertemakan Portal Berita</p>\r\n<p><strong>Pengertian Tari Kreasi Modern:</strong><br>Tari Kreasi Modern adalah jenis tari yang melibatkan unsur-unsur kreativitas dan inovasi. Secara umum, tarian ini sering menggabungkan elemen-elemen tradisional dan modern. Individu yang terlibat dalam pembuatan dan penampilan tarian ini disebut sebagai koreografer.</p>\r\n<p><strong>Ciri-ciri Tari Kreasi Modern:</strong><br>1. <strong>Kreativitas dan Inovasi:</strong> Tari ini menonjolkan unsur kreativitas dan inovasi dalam setiap gerakannya.<br>2.&nbsp;<strong>Penggabungan Elemen Tradisional dan Modern:</strong>&nbsp;Mengkombinasikan unsur-unsur tradisional dengan elemen-elemen modern, menciptakan harmoni antara masa lalu dan masa kini.<br>3.<strong> Koreografer sebagai Pemain Utama: </strong>Pelaku tari dalam jenis ini lebih dikenal sebagai koreografer, yang memiliki peran kunci dalam menciptakan gerakan dan konsep artistik tarian</p>', 18, 'Yusar Brian Sadella', 0x363536346330376561393935652e6a7067, 'D_UrY8B-HmU', '<p><a href=\"https://pelajarindo.com/tari-modern/\">TARI MODERN : Pengertian, Sejarah, Ciri dan Contoh - Pelajarindo.com</a></p>\r\n<p><a href=\"https://www.gramedia.com/literasi/tari-kreasi-adalah/\">Tari Kreasi: Pengertian, Karakteristik, Fungsi, Jenis dan Unsurnya (gramedia.com)</a></p>', 2, 0),
+(2, 'Materi Bahasa Inggris', '<p>This page contains English subjects with the theme Website Type and here I choose the type of social media website and my goal in making this is to fulfill the task of Project 3 themed News Portal.</p>\r\n<hr>\r\n<p><strong>Definition:</strong><br>A social media website is an online platform designed for communication and marketing, enabling individuals to share their thoughts, ideas, and experiences with others.</p>\r\n<p><strong>Functions:</strong><br>Social media serves various purposes, including:<br>1. <strong>Personal and Business Information Sharing:</strong> Facilitates the sharing of personal or business-related information with a wider audience.<br>2. <strong>Building Connections:</strong>&nbsp;Connects individuals with similar interests, fostering communities and networks.<br>3.&nbsp;<strong>Local Business Discovery:</strong>&nbsp;Aids in discovering local businesses and various resources through user recommendations and reviews.<br>4. <strong>Event Information Access:</strong> Provides access to information about events occurring locally or globally, enhancing awareness and participation.</p>', 13, 'Yusar Brian Sadella', 0x363536346332626262376530642e6a7067, 'AH5B6eZ1AZg', '<p><a href=\"https://romeltea.com/pengertian-media-sosial-dan-jenis-jenisnya/#:~:text=Jenis-Jenis%20Media%20Sosial%201%201.%20Website%20Kolaborasi%20Situs,Virtual%20Game%20...%206%206.%20Virtual%20Social%20\">Pengertian Media Sosial dan Jenis-Jenisnya &raquo; Romeltea Online</a></p>\r\n<p><a href=\"https://dailysocial.id/post/media-sosial-adalah\">Media Sosial: Pengertian, Fungsi, dan Jenisnya | DailySocial.id</a></p>', 6, 0),
+(3, 'Materi Pipas', '<p>Halaman ini berisi rangkuman Materi Pipas yang bertemakan Mitigasi Bencana dan ini bertujuan untuk memenuhi tugas kolaborasi dan tugas kejuruan berupa project 3 yang bertemakan portal berita.</p>\r\n<hr>\r\n<p><strong>Pengertian Mitigasi Bencana:</strong><br>Mitigasi Bencana adalah serangkaian tindakan yang diambil untuk mengurangi atau mencegah dampak negatif yang dapat timbul akibat bencana alam atau bencana yang disebabkan oleh aktivitas manusia. Mitigasi bencana melibatkan tiga tahap, yaitu tindakan prabencana, saat bencana, dan pascabencana.</p>\r\n<p><strong>Faktor Bencana:</strong></p>\r\n<p>1. <strong>Faktor Alam:</strong><br>&nbsp; &nbsp;- Bencana alam disebabkan oleh faktor alam, seperti kenaikan suhu ekstrim atau tata letak suatu wilayah. Contohnya, Indonesia yang terletak di garis khatulistiwa menghadapi cuaca panas.</p>\r\n<p>2. <strong>Faktor Geologi:</strong><br>&nbsp; &nbsp;- Bencana alam terkait dengan unsur geologi, seperti lempeng tektonik. Indonesia, berada di tiga lempeng tektonik, mengalami bencana gempa bumi sebagai contohnya.</p>\r\n<p>3. <strong>Faktor Manusia:</strong><br>&nbsp; &nbsp;- Bencana akibat aktivitas manusia, seperti deforestasi, pembuangan sampah sembarangan, dan aktivitas merugikan lingkungan, dapat menyebabkan efek domino dan menciptakan bencana alam.</p>\r\n<p><strong>Tindakan Mitigasi:</strong></p>\r\n<p>1. <strong>Tindakan Prabencana:</strong><br>&nbsp; &nbsp;- Langkah-langkah direncanakan dan dilaksanakan sebelum terjadinya bencana. Ini termasuk mengurangi risiko, mempersiapkan masyarakat, dan memitigasi dampak yang mungkin terjadi.</p>\r\n<p>2. <strong>Tindakan Saat Bencana:</strong><br>&nbsp; &nbsp;- Tindakan yang dilakukan saat bencana sedang terjadi untuk melindungi nyawa dan barang pribadi. Ini mencakup evakuasi, penyediaan tempat penampungan, dan koordinasi tanggap darurat.</p>\r\n<p>3. <strong>Tindakan Pasca-Bencana:</strong><br>&nbsp; &nbsp;- Langkah-langkah yang diambil setelah bencana terjadi, termasuk pemulihan, pembangunan kembali, dan evaluasi. Pelajaran yang dipetik digunakan untuk meningkatkan kesiapan menghadapi bencana yang akan datang.</p>', 8, 'Yusar Brian Sadella', 0x363536346334386637373737362e6a7067, 'lgniIYwWUWk&t=51s', '<p><a href=\"https://www.gramedia.com/literasi/mitagasi-bencana/\">Materi Mitigasi Bencana: Pengertian, Jenis, Strategi, Contoh (gramedia.com)</a></p>', 9, 0),
+(4, 'Materi Bahasa Jawa', '<p>Kacaritak&eacute; ing kaca iki dados r&eacute;sum&eacute; saka pelajaran basa Jawa kang nyeratake babagan unggah-ungguh basa lan ngedaptaraken tugas kejuruanku, yaitu Proyek ke-3.</p>\r\n<hr>\r\n<p><strong>Pangertosan</strong></p>\r\n<p>Unggah-ungguh basa iku sawijining tingkatan basa sing digunakak&eacute; masyarakat Jawa nalika ngomong karo wong liya. Unggah-ungguh basa iki karo duw&eacute; 3 tingkatan, yaiku Ngoko, Krama, lan Krama Alus. Ing kene ana conto saka panggunaan basa Krama ing pitulasan dina-dina.</p>', 11, 'Yusar Brian Sadella', 0x363536346336326139343737392e706e67, 'WUdioaJ6e14', '<p><a href=\"https://haloedukasi.com/unggah-ungguh-basa-jawa\">Unggah Ungguh Basa Jawa: Jenis dan Contohnya - HaloEdukasi.com</a></p>', 15, 0),
+(5, 'Materi Bahasa Indonesia', '<p>Halaman ini berisi rangkuman Materi Bahasa Indonesia yang bertemakan Teks Hikayat yang bertujuan memenuhi tugas kolaborasi dan tugas kejuruan berupa Project 3 yang bertemakan Portal Berita</p>\r\n<hr>\r\n<p><strong>Pengertian</strong><br>Teks Hikayat adalah salah satu bentuk sastra yang berasal dari budaya masyarakat Melayu. Hikayat sering kali mengandung unsur-unsur kehidupan moral, nilai-nilai budaya, pendidikan, dan pelajaran hidup. Ceritanya bersifat mitologis dan epik.</p>\r\n<p><strong>Ciri-ciri Teks Hikayat</strong><br>1. <strong>Menggunakan Unsur Mitologis atau Fantasi</strong><br>Hikayat dapat mencakup unsur mitologis atau fantastis, seperti makhluk-makhluk gaib dan kekuatan magis.</p>\r\n<p>2. <strong>Gaya Bahasa yang Tinggi</strong><br>Teks hikayat sering menggunakan gaya bahasa yang kaya dan tinggi, mencerminkan keindahan sastra. Pemilihan kata dan ungkapan sering kali mengandung kearifan dan keeksotisan.</p>\r\n<p>3. <strong>Nilai-Nilai Moral</strong><br>Adanya pesan moral atau nilai-nilai yang ingin disampaikan kepada pembaca. Cerita hikayat sering mengandung ajaran tentang kebaikan, keadilan, dan kebijaksanaan.</p>\r\n<p>4. <strong>Fungsi Sosial dan Budaya</strong><br>Teks hikayat memiliki fungsi untuk menyampaikan nilai-nilai budaya, mengajarkan moral, dan merawat identitas budaya masyarakat setempat.</p>', 27, 'Yusar Brian Sadella', 0x363536346337643735663566392e6a7067, 'vbF7I2WJNi8', '<p><a href=\"https://www.ruangguru.com/blog/pengertian-hikayat-dan-karakteristiknya\">Hikayat: Pengertian, Karakteristik, Jenis, &amp; Contohnya | Bahasa Indonesia Kelas 10 - Belajar Gratis di Rumah Kapan Pun! | Blog Ruangguru</a></p>\r\n<p><a href=\"https://www.youtube.com/watch?v=vbF7I2WJNi8\">(28) Materi Hikayat Kelas 10 SMA: Pengertian, Fungsi, Karakteristik, Nilai-Nilai, dan Struktur Hikayat - YouTube</a></p>', 25, 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id_artikel`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id_artikel` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
